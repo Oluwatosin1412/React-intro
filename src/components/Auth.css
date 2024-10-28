@@ -1,0 +1,150 @@
+/* General body styling to center the form */
+/* General body styling to center the form */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e9f5ee, #a8dfc4);
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Centering the auth container with a modern shadow */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    animation: slideIn 0.8s ease;
+}
+
+.auth-container:hover {
+    transform: translateY(-10px);
+}
+
+/* Title Styling */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* Form container */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input fields with stylish borders and focus animation */
+input {
+    padding: 15px;
+    border: 2px solid #b2dfdb;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    transition: border-color 0.4s, box-shadow 0.4s, background-color 0.4s;
+}
+
+input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.2);
+    background-color: #e0f2f1;
+    outline: none;
+}
+
+/* Hover effect for input fields */
+input:hover {
+    border-color: #66bb6a;
+}
+
+/* Submit Button with a gradient background */
+button {
+    padding: 15px;
+    background: linear-gradient(45deg, #66bb6a, #2e7d32);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #43a047, #1b5e20);
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: translateY(2px);
+    background: #2e7d32;
+}
+
+/* Add some sleek floating labels for a modern effect */
+input::placeholder {
+    color: green;
+}
+
+input:focus::placeholder {
+    color: #66bb6a;
+}
+
+/* Label animation */
+input:not(:placeholder-shown) {
+    background-color: #e8f5e9;
+}
+
+/* Button Active Effect */
+button:active {
+    background-color: #004d40;
+    transform: translateY(1px);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 30px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+    .form-group{
+      display: flex;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
+
+/* Keyframe animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtle fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
