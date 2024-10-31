@@ -1,45 +1,32 @@
-import React, { useState } from 'react';
-import './Auth.css';
+import React from 'react';
+//import { Link } from 'react-router-dom';
 
-const Login = () => {
-    const [formData, setFormData] = useState({
-        email: '',
-        password: '',
-    });
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Login logic
-    };
-
-    return (
-        <div className="auth-container">
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Email" 
-                    value={formData.email} 
-                    onChange={handleChange} 
-                    required 
-                />
-                <input 
-                    type="password" 
-                    name="password" 
-                    placeholder="Password" 
-                    value={formData.password} 
-                    onChange={handleChange} 
-                    required 
-                />
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    );
-};
+function Login() {
+  return (
+    <div className="login-container">
+      <div className="login-card">
+        <h1>Login</h1>
+        
+        <form>
+          <label>
+            Email Address
+            <input type="email" placeholder="Enter email" />
+          </label>
+          
+          <label>
+            Password
+            <input type="password" placeholder="Enter password" />
+          </label>
+          
+          <button type="submit" className="login-button">Login</button>
+        </form>
+        
+        {/*
+        <Link to="/forgot-password" className="forgot-password-link">Forgot Password?</Link>
+        */}
+      </div>
+    </div>
+  );
+}
 
 export default Login;
